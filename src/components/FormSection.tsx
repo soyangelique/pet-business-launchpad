@@ -12,10 +12,26 @@ const businessTypes = [
 
 const FormSection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "7a25de70-31e1-45e2-a90d-b6a0c7a8bb58");
+    formData.append("subject", "Nueva sesión estratégica - Pixel Pet Digital");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      if (res.ok) setSubmitted(true);
+    } catch (err) {
+      console.error("Error enviando formulario:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,6 +78,7 @@ const FormSection = () => {
                 </label>
                 <input
                   type="text"
+                  name="nombre"
                   required
                   placeholder="Angélica Pérez"
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
@@ -73,6 +90,7 @@ const FormSection = () => {
                 </label>
                 <input
                   type="text"
+                  name="negocio"
                   required
                   placeholder="Mi Pet Shop"
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
@@ -86,6 +104,7 @@ const FormSection = () => {
                   Tipo de negocio pet *
                 </label>
                 <select
+                  name="tipo_negocio"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
                 >
@@ -102,6 +121,7 @@ const FormSection = () => {
                   Tiempo operando *
                 </label>
                 <select
+                  name="tiempo_operando"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
                 >
@@ -120,6 +140,7 @@ const FormSection = () => {
                 ¿Cuál es tu principal dificultad hoy? *
               </label>
               <textarea
+                name="dificultad_principal"
                 required
                 rows={3}
                 placeholder="Ej: No sé cómo atraer clientes, no tengo tiempo para redes sociales..."
@@ -132,6 +153,7 @@ const FormSection = () => {
                 ¿Qué quieres lograr en los próximos 3 meses? *
               </label>
               <textarea
+                name="objetivo_3_meses"
                 required
                 rows={2}
                 placeholder="Ej: Tener mis primeros 10 clientes recurrentes..."
@@ -146,6 +168,7 @@ const FormSection = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   required
                   placeholder="tu@correo.com"
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
@@ -157,6 +180,7 @@ const FormSection = () => {
                 </label>
                 <input
                   type="tel"
+                  name="whatsapp"
                   required
                   placeholder="+57 300 123 4567"
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
@@ -166,9 +190,10 @@ const FormSection = () => {
 
             <button
               type="submit"
-              className="w-full gradient-coral text-accent-foreground font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg mt-2"
+              disabled={loading}
+              className="w-full gradient-coral text-accent-foreground font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg mt-2 disabled:opacity-60"
             >
-              Quiero organizar mi negocio 🐾
+              {loading ? "Enviando..." : "Quiero organizar mi negocio 🐾"}
             </button>
 
             <p className="text-center text-muted-foreground text-xs">
