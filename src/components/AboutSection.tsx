@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import horus from "@/assets/horus.jpg";
 import lulu from "@/assets/lulu.jpg";
+import angelica from "@/assets/angelica.png";
 
 const AboutSection = () => {
   return (
@@ -15,16 +16,13 @@ const AboutSection = () => {
           >
             <div className="relative">
               {/* Photo placeholder - professional photo goes here */}
-              <div className="w-full aspect-[4/5] rounded-2xl bg-muted border-2 border-border overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 rounded-full bg-coral/10 mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl">👩‍💼</span>
-                    </div>
-                    <p className="text-sm font-medium">Foto profesional de Angélica</p>
-                  </div>
+                <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden relative">
+                  <img
+                    src={angelica}
+                    alt="Angélica, fundadora de Pixel Pet Digital"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-              </div>
               {/* Decorative pet photos */}
               <img
                 src={horus}
