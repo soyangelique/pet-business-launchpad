@@ -59,9 +59,9 @@ export default {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
         },
-        sky: {
-          DEFAULT: "hsl(var(--sky))",
-          light: "hsl(var(--sky-light))",
+        "blue-accent": {
+          DEFAULT: "hsl(var(--blue-accent))",
+          light: "hsl(var(--blue-accent-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

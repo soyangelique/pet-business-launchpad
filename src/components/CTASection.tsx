@@ -17,16 +17,16 @@ const CTASection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Si estás empezando y quieres construir con sistema,
             <br />
-            <span className="text-gradient">este es tu momento.</span>
+            <span className="text-gradient">tu sesión estratégica te está esperando.</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
             No esperes a tener todo perfecto. Solo necesitas dar el primer paso con la dirección correcta.
           </p>
           <button
             onClick={scrollToForm}
-            className="gradient-coral text-accent-foreground font-semibold px-10 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg"
+            className="gradient-coral text-accent-foreground font-semibold px-10 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg shadow-coral/25"
           >
-            Agenda tu sesión estratégica
+            Agenda ahora — es gratis
           </button>
         </motion.div>
       </div>

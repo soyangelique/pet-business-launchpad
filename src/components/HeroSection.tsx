@@ -12,9 +12,9 @@ const HeroSection = () => {
 
   return (
     <section className="gradient-hero min-h-[90vh] flex items-center relative overflow-hidden">
-      {/* Decorative circles */}
-      <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-sky/10 blur-3xl" />
-      <div className="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-coral/10 blur-3xl" />
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-blue-accent/8 blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-56 h-56 rounded-full bg-coral/6 blur-3xl" />
 
       <div className="container mx-auto max-w-5xl section-padding relative z-10">
         <motion.div
@@ -32,23 +32,23 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-4 leading-relaxed">
-            Ayudo a emprendimientos pet pequeños en Colombia a organizarse, estructurarse y vender mejor usando estrategia e inteligencia artificial.
+            Ayudo a negocios pet pequeños en Colombia a organizarse, estructurarse y vender mejor con estrategia e inteligencia artificial.
           </p>
 
-          <p className="text-base text-primary-foreground/60 max-w-xl mx-auto mb-10">
+          <p className="text-base text-primary-foreground/50 max-w-xl mx-auto mb-10">
             Soy Angélica, fundadora de Pixel Pet Digital. Construyo sistemas para que tu negocio pet deje de depender de la suerte.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToForm}
-              className="gradient-coral text-accent-foreground font-semibold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg"
+              className="gradient-coral text-accent-foreground font-semibold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg shadow-coral/25"
             >
               Agenda tu sesión estratégica
             </button>
             <button
               onClick={scrollToMethod}
-              className="border-2 border-primary-foreground/30 text-primary-foreground font-medium px-8 py-4 rounded-lg text-lg hover:border-primary-foreground/60 transition-colors"
+              className="border-2 border-primary-foreground/20 text-primary-foreground font-medium px-8 py-4 rounded-lg text-lg hover:border-blue-accent/60 hover:text-blue-accent-light transition-colors"
             >
               Conoce el método
             </button>
