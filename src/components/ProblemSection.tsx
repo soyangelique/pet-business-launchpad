@@ -8,15 +8,15 @@ const problems = [
   },
   {
     icon: TrendingDown,
-    text: "No tienes un sistema claro para atraer y retener clientes.",
+    text: "No tienes un sistema claro de ventas.",
   },
   {
     icon: Users,
-    text: "Confundes seguidores con ventas reales.",
+    text: "Confundes seguidores con clientes reales.",
   },
   {
     icon: Clock,
-    text: "Trabajas mucho pero no ves crecimiento real.",
+    text: "Trabajas mucho pero no ves crecimiento.",
   },
 ];
 
@@ -35,7 +35,7 @@ const ProblemSection = () => {
             ¿Te suena familiar?
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            La mayoría de negocios pet pequeños enfrentan estos problemas. No estás solo.
+            El marketing para negocios pet en Colombia no debería sentirse así.
           </p>
         </motion.div>
 
@@ -47,7 +47,7 @@ const ProblemSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-md transition-shadow"
+              className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-coral/30 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-coral-light flex items-center justify-center shrink-0">
                 <problem.icon className="w-5 h-5 text-coral" />

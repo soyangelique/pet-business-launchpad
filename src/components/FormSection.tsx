@@ -81,7 +81,7 @@ const FormSection = () => {
                   name="nombre"
                   required
                   placeholder="Angélica Pérez"
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition"
                 />
               </div>
               <div>
@@ -93,7 +93,7 @@ const FormSection = () => {
                   name="negocio"
                   required
                   placeholder="Mi Pet Shop"
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition"
                 />
               </div>
             </div>
@@ -106,7 +106,7 @@ const FormSection = () => {
                 <select
                   name="tipo_negocio"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition"
                 >
                   <option value="">Selecciona...</option>
                   {businessTypes.map((type) => (
@@ -123,7 +123,7 @@ const FormSection = () => {
                 <select
                   name="tiempo_operando"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition"
                 >
                   <option value="">Selecciona...</option>
                   <option value="idea">Solo es una idea</option>
@@ -144,7 +144,7 @@ const FormSection = () => {
                 required
                 rows={3}
                 placeholder="Ej: No sé cómo atraer clientes, no tengo tiempo para redes sociales..."
-                className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition resize-none"
               />
             </div>
 
@@ -157,7 +157,7 @@ const FormSection = () => {
                 required
                 rows={2}
                 placeholder="Ej: Tener mis primeros 10 clientes recurrentes..."
-                className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition resize-none"
               />
             </div>
 
@@ -171,7 +171,7 @@ const FormSection = () => {
                   name="email"
                   required
                   placeholder="tu@correo.com"
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition"
                 />
               </div>
               <div>
@@ -183,7 +183,7 @@ const FormSection = () => {
                   name="whatsapp"
                   required
                   placeholder="+57 300 123 4567"
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-coral/50 transition"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-accent/50 transition"
                 />
               </div>
             </div>
@@ -191,7 +191,7 @@ const FormSection = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full gradient-coral text-accent-foreground font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg mt-2 disabled:opacity-60"
+              className="w-full gradient-coral text-accent-foreground font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg shadow-coral/25 mt-2 disabled:opacity-60"
             >
               {loading ? "Enviando..." : "Quiero organizar mi negocio 🐾"}
             </button>

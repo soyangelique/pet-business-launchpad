@@ -6,42 +6,42 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 213 40% 16%;
+    --background: 224 60% 97%;
+    --foreground: 224 60% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 213 40% 16%;
+    --card-foreground: 224 60% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 213 40% 16%;
+    --popover-foreground: 224 60% 15%;
 
-    --primary: 213 55% 22%;
+    --primary: 224 65% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 30% 95%;
-    --secondary-foreground: 213 40% 16%;
+    --secondary: 224 30% 93%;
+    --secondary-foreground: 224 60% 15%;
 
-    --muted: 210 20% 94%;
-    --muted-foreground: 213 15% 48%;
+    --muted: 224 20% 92%;
+    --muted-foreground: 224 15% 45%;
 
-    --accent: 14 85% 58%;
+    --accent: 14 80% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
-    --ring: 213 55% 22%;
+    --border: 224 20% 88%;
+    --input: 224 20% 88%;
+    --ring: 224 65% 15%;
 
     --radius: 0.75rem;
 
-    --coral: 14 85% 58%;
-    --coral-light: 14 85% 95%;
-    --navy: 213 55% 22%;
-    --navy-light: 213 40% 35%;
-    --sky: 200 70% 55%;
-    --sky-light: 200 70% 94%;
+    --coral: 14 80% 53%;
+    --coral-light: 14 80% 95%;
+    --navy: 224 65% 15%;
+    --navy-light: 224 50% 30%;
+    --blue-accent: 214 65% 57%;
+    --blue-accent-light: 214 65% 93%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -54,25 +54,25 @@
   }
 
   .dark {
-    --background: 213 40% 8%;
-    --foreground: 210 20% 95%;
-    --card: 213 35% 12%;
-    --card-foreground: 210 20% 95%;
-    --popover: 213 35% 12%;
-    --popover-foreground: 210 20% 95%;
-    --primary: 14 85% 58%;
+    --background: 224 60% 6%;
+    --foreground: 224 10% 92%;
+    --card: 224 50% 10%;
+    --card-foreground: 224 10% 92%;
+    --popover: 224 50% 10%;
+    --popover-foreground: 224 10% 92%;
+    --primary: 14 80% 53%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 213 30% 18%;
-    --secondary-foreground: 210 20% 95%;
-    --muted: 213 25% 16%;
-    --muted-foreground: 210 15% 60%;
-    --accent: 14 85% 58%;
+    --secondary: 224 40% 14%;
+    --secondary-foreground: 224 10% 92%;
+    --muted: 224 30% 14%;
+    --muted-foreground: 224 10% 55%;
+    --accent: 14 80% 53%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 213 25% 20%;
-    --input: 213 25% 20%;
-    --ring: 14 85% 58%;
+    --border: 224 30% 18%;
+    --input: 224 30% 18%;
+    --ring: 14 80% 53%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,15 +100,22 @@
 
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(213 55% 22%) 0%, hsl(213 40% 30%) 50%, hsl(200 50% 35%) 100%);
+    background: linear-gradient(145deg, hsl(224 65% 15%) 0%, hsl(224 50% 20%) 40%, hsl(214 55% 28%) 100%);
   }
 
   .gradient-coral {
-    background: linear-gradient(135deg, hsl(14 85% 58%) 0%, hsl(20 90% 52%) 100%);
+    background: linear-gradient(135deg, hsl(14 80% 53%) 0%, hsl(8 85% 48%) 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(14 85% 58%), hsl(20 90% 52%));
+    background: linear-gradient(135deg, hsl(14 80% 53%), hsl(8 85% 48%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, hsl(214 65% 57%), hsl(214 70% 45%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

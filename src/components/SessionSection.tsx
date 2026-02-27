@@ -8,7 +8,7 @@ const SessionSection = () => {
 
   return (
     <section className="section-padding gradient-hero relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-coral/5 blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-blue-accent/8 blur-3xl" />
 
       <div className="container mx-auto max-w-4xl relative z-10">
         <motion.div
@@ -23,8 +23,8 @@ const SessionSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             15 minutos que pueden cambiar la dirección de tu negocio pet
           </h2>
-          <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-            No es una clase. No es un webinar. Es una conversación estratégica y directa sobre tu negocio.
+          <p className="text-primary-foreground/60 text-lg max-w-2xl mx-auto">
+            No es una clase. No es un webinar. Es una conversación directa y estratégica.
           </p>
         </motion.div>
 
@@ -38,12 +38,12 @@ const SessionSection = () => {
             {
               icon: Zap,
               title: "Orientación puntual",
-              desc: "Una recomendación clara y accionable para avanzar.",
+              desc: "Una recomendación clara y accionable.",
             },
             {
               icon: Clock,
               title: "Sin compromiso",
-              desc: "Solo 15 minutos. Si te sirve, seguimos. Si no, te llevas valor.",
+              desc: "15 minutos. Si te sirve, seguimos.",
             },
           ].map((item, i) => (
             <motion.div
@@ -54,20 +54,20 @@ const SessionSection = () => {
               transition={{ delay: i * 0.1 }}
               className="text-center p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10"
             >
-              <item.icon className="w-8 h-8 text-coral mx-auto mb-3" />
+              <item.icon className="w-8 h-8 text-blue-accent mx-auto mb-3" />
               <h3 className="font-bold text-primary-foreground mb-2">{item.title}</h3>
-              <p className="text-primary-foreground/60 text-sm">{item.desc}</p>
+              <p className="text-primary-foreground/50 text-sm">{item.desc}</p>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center">
-          <p className="text-primary-foreground/60 text-sm mb-4">
-            Para emprendimientos pet que están listos para dejar de improvisar.
+          <p className="text-primary-foreground/50 text-sm mb-4">
+            Para emprendimientos pet Colombia que están listos para dejar de improvisar.
           </p>
           <button
             onClick={scrollToForm}
-            className="gradient-coral text-accent-foreground font-semibold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg"
+            className="gradient-coral text-accent-foreground font-semibold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg shadow-coral/25"
           >
             Quiero mi sesión estratégica
           </button>

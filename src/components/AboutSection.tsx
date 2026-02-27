@@ -15,15 +15,13 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="relative">
-              {/* Photo placeholder - professional photo goes here */}
-                <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden relative">
-                  <img
-                    src={angelica}
-                    alt="Angélica, fundadora de Pixel Pet Digital"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-              {/* Decorative pet photos */}
+              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden relative">
+                <img
+                  src={angelica}
+                  alt="Angélica, fundadora de Pixel Pet Digital"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <img
                 src={horus}
                 alt="Horus, mascota de Angélica"
@@ -44,24 +42,22 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              ¿Quién está detrás de Pixel Pet Digital?
+              ¿Quién está detrás de
+              <span className="text-gradient"> Pixel Pet Digital</span>?
             </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Soy <strong className="text-foreground">Angélica</strong>, mamá pet y estratega de negocios. Empecé Pixel Pet Digital porque vi algo que se repetía en todos los emprendimientos pet que conocía: <strong className="text-foreground">mucha pasión, pero cero sistema</strong>.
+                Soy <strong className="text-foreground">Angélica</strong>, mamá pet y estratega digital. Creé Pixel Pet Digital porque en los emprendimientos pet de Colombia vi siempre lo mismo: <strong className="text-foreground">mucha pasión, cero sistema</strong>.
               </p>
               <p>
-                Estoy construyendo esta marca con el mismo método que enseño. Sin atajos, sin fórmulas mágicas. Con estrategia, estructura y herramientas de inteligencia artificial que realmente funcionan.
-              </p>
-              <p>
-                Conecto especialmente con quienes están empezando desde cero, porque sé lo que se siente construir algo desde la nada, con recursos limitados pero con una visión clara.
+                Construyo esta marca con el mismo método que enseño. Sin atajos, sin fórmulas mágicas. Con estrategia, estructura e inteligencia artificial.
               </p>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl bg-coral-light border border-coral/20">
+            <div className="mt-6 p-4 rounded-xl bg-blue-accent-light border border-blue-accent/20">
               <p className="text-foreground font-medium text-sm">
-                🐾 Mi misión: que los negocios pet pequeños tengan las mismas oportunidades de crecer que los grandes, solo que con mejor estrategia.
+                🐾 Mi misión: que los negocios pet pequeños tengan las mismas oportunidades de crecer que los grandes.
               </p>
             </div>
           </motion.div>
